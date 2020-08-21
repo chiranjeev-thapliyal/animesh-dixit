@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Animesh Dixit</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./gallery.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Satisfy"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>Workspace</h1>
+    <div id="gallery" class="container-fluid">
+      <img src="./images/logos/1.jpg" class="card img-responsive" />
+      <img src="./images/logos/2.jpg" class="card img-responsive" />
+      <img src="./images/logos/3.jpg" class="card img-responsive" />
+      <img src="./images/logos/4.jpg" class="card img-responsive" />
+      <img src="./images/logos/500_f_25.jpg" class="card img-responsive" />
+      <img src="./images/logos/500_f_33fdgd.jpg" class="card img-responsive" />
+      <img
+        src="./images/logos/500_f_33fdgddfd.jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/logos/699.jpg" class="card img-responsive" />
+      <img src="./images/logos/abstractfghfg.jpg" class="card img-responsive" />
+      <img src="./images/logos/FLOWER.jpg" class="card img-responsive" />
+      <img src="./images/logos/modern-lghf.jpg" class="card img-responsive" />
+      <img src="./images/logos/owl-full.png" class="card img-responsive" />
+      <img
+        src="./images/posters/india vs china4 (1).jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/posters/opacity.jpg" class="card img-responsive" />
+      <img src="./images/posters/poster 2.jpg" class="card img-responsive" />
+      <img src="./images/posters/POSTER 4.jpg" class="card img-responsive" />
+      <img
+        src="./images/posters/poster freedom.jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/posters/POSTER-3.jpg" class="card img-responsive" />
+      <img src="./images/posters/POSTER.jpg" class="card img-responsive" />
+      <img src="./images/posters/shivam2.jpg" class="card img-responsive" />
+      <img
+        src="./images/posters/Untitled-2-Recovered.jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/posters/Untitled-3.jpg" class="card img-responsive" />
+      <img
+        src="./images/posters/women saftey2.jpg"
+        class="card img-responsive"
+      />
+      <img
+        src="./images/banners/3405472-Recovered.jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/banners/BANNER.jpg" class="card img-responsive" />
+      <img
+        src="./images/banners/lilboss web ads.jpg"
+        class="card img-responsive"
+      />
+      <img src="./images/banners/BANNER.jpg" class="card img-responsive" />
+      <img
+        src="./images/banners/web tempelete.jpg"
+        class="card img-responsive"
+      />
+      <img
+        src="./images/artworks/3rd digital painting colour from shirt removies.jpg"
+        class="card img-responsive"
+      />
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("img").click(function () {
+          var t = $(this).attr("src");
+          $(".modal-body").html("<img src='" + t + "' class='modal-img'>");
+          $("#myModal").modal();
+        });
+
+        $("video").click(function () {
+          var v = $("video > source");
+          var t = v.attr("src");
+          $(".modal-body").html(
+            "<video class='model-vid' controls><source src='" +
+              t +
+              "' type='video/mp4'></source></video>"
+          );
+          $("#myModal").modal();
+        });
+      }); //EOF Document.ready
+    </script>
+  </body>
+</html>
